@@ -4,16 +4,6 @@ This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next
 
 ## SSO
 
-If you need to setup the SSO you first needs to:
-
-* Go to `http://localhost/`. This url is whitelisted by SSO, if changed you need to open a [ticket on SSO](https://git.vptech.eu/veepee/foundation/products/platform-services/services/authentication/client-samples/-/issues) to add it to the whitelist.
-
-* Login with your SSO credentials, ask for permissions at [#prd-sam-dev](Slack).
-
-Deployed versions can be accessed at:
-* Preprod: https://sambot-ui-preprod.checkout.vptech.eu/
-* Prod: https://sambot-ui.vptech.eu/
-
 ## Core libraries
 * React
 * Next-js
@@ -30,7 +20,7 @@ Deployed versions can be accessed at:
 To start development server:
 
 ```bash
-git clone https://git.vptech.eu/veepee/stock/products/sam/backoffices/sambot-ui.git
+git clone https://git.
 
 cd sambot-ui
 
