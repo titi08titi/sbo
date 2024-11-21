@@ -20,7 +20,7 @@ applications: # Declare all your applications here
     ciConfig:
       test:
         cmd: yarn install --frozen-lockfile && yarn test:ci
-        image: docker.registry.vptech.eu/node:18-alpine
+        image: docker.registry.sbo.eu/node:18-alpine
     locations: # customize the deployment
       integration:
         zoneList: # List of zones where we'll deploy the app (fr1, fr2, nl1)
