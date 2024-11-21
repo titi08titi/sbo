@@ -1,0 +1,30 @@
+{
+  "extends": [
+    "@front-web/eslint-config-veepee", "@front-web/eslint-config-veepee/typescript", "plugin:@next/next/recommended"
+  ],
+  "rules": {
+    "react/react-in-jsx-scope": 0,
+    "no-console": ["warn", { "allow": ["error", "info"]}],
+    "prettier/prettier": ["error", { "endOfLine": "auto" }]
+  },
+  "overrides": [
+    {
+      "files": ["**/*.spec.ts", "**/*.spec.tsx", "jest.config.js"],
+      "rules": {
+        "@typescript-eslint/no-var-requires": 0,
+        "import/imports-first": 0,
+        "import/first": 0,
+        "import/order": 0
+      }
+    }
+  ],
+  "settings": {
+    "import/resolver": {
+      "node": {},
+      "typescript": {
+        "project": "./"
+      }
+    }
+  }
+}
+

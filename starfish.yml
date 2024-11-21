@@ -1,0 +1,34 @@
+config: # Customize starfish behaviour
+  ci: # Customize some CI settings
+    workflowName: "krabs"
+    featureBranchingEnable: true
+    quality: # Configure quality steps in CI
+      enable: true # Enable code-quality
+    security: # Configure security steps in CI
+      enable: true # Enable security  
+    sonar: # Configure sonar support steps in CI
+      enable: true # Enable sonar support
+      dindEnable: true # enable docker in docker for sonar job
+    deployment: # List of environments to deploy manually. Production when it's omitted
+      manual: # environments for depoying manually
+        feature: false 
+        integration: false 
+        staging: true
+        production: true 
+applications: # Declare all your applications here
+  sam-sambot-ui:
+    ciConfig:
+      test:
+        cmd: yarn install --frozen-lockfile && yarn test:ci
+        image: docker.registry.vptech.eu/node:18-alpine
+    locations: # customize the deployment
+      integration:
+        zoneList: # List of zones where we'll deploy the app (fr1, fr2, nl1)
+        - "fr1"
+      staging:
+        zoneList: # List of zones where we'll deploy the app (fr1, fr2, nl1)
+        - "fr1"
+      production:
+        zoneList: # List of zones where we'll deploy the app (fr1, fr2, nl1)
+        - "fr1"
+        - "nl1"

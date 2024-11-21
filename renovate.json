@@ -1,0 +1,22 @@
+{
+  "labels": ["deps"],
+  "packageRules": [
+    {
+      "matchDepTypes": ["dependencies"],
+      "enabled": true,
+      "groupName": "deps",
+      "groupSlug": "deps",
+      "labels": ["externals"],
+      "rangeStrategy": "bump"
+    },
+    {
+      "matchDepTypes": ["devDependencies"],
+      "labels": ["devs"],
+      "enabled": true,
+      "groupName": "Dev deps",
+      "groupSlug": "dev-deps",
+      "rangeStrategy": "bump"
+    }
+  ],
+  "commitMessage": "chore: {{{commitMessageAction}}} {{{commitMessageTopic}}} {{{commitMessageExtra}}} {{{commitMessageSuffix}}}"
+}
