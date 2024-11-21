@@ -1,7 +1,7 @@
 # Based on nextjs with-docker: https://github.com/vercel/next.js/blob/5ebc6d064f8d3b0ad44c4576bbdfff6c1d3adbc4/examples/with-docker/Dockerfile#L1
 
 # Install dependencies only when needed
-FROM docker.registry.vptech.eu/node:18-alpine AS deps
+FROM docker.registry.sbo.eu/node:18-alpine AS deps
 
 # Check https://github.com/nodejs/docker-node/tree/b4117f9333da4138b03a546ec926ef50a31506c3#nodealpine to understand why libc6-compat might be needed.
 RUN apk add --no-cache libc6-compat
@@ -14,7 +14,7 @@ COPY yarn.lock .
 RUN yarn install --frozen-lockfile
 
 # Rebuild the source code only when needed
-FROM docker.registry.vptech.eu/node:18-alpine AS builder
+FROM docker.registry.sbo.eu/node:18-alpine AS builder
 
 WORKDIR /app
 
