@@ -1,0 +1,35 @@
+#__next {
+    a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: inherit;
+    text-decoration:none;
+  }
+}
+
+#menu-appbar {
+  a, a:link, a:visited, a:focus, a:hover, a:active {
+    color: inherit !important;
+    text-decoration: none;
+  }
+}
+
+.veepee-pink {
+  --tw-text-opacity: 1;
+  color: rgb(236 0 140 / var(--tw-text-opacity));
+}
+
+.title {
+  margin: 0;
+  line-height: 1.15;
+  font-size: 1.2rem;
+  @apply font-bold veepee-pink;
+}
+
+.description {
+  margin: 4rem 0 0;
+  line-height: 1.5;
+  font-size: 1.5rem;
+}
+
+.title, .description {
+  text-align: center;
+}
