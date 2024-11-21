@@ -1,9 +1,9 @@
 include:
-  - project: veepee/vptech/ci-cd/starfish
+  - project: sbo/ci-cd/starfish
     ref: 1-latest
     file: gitlab-ci.yml
 
 variables:
-  NAMESPACE: operations-sam
-  SF_SONAR_GROUP: operations-sam-team
+  NAMESPACE: sbo
+  SF_SONAR_GROUP: sbo
   DOCKER_BUILDKIT: 1
